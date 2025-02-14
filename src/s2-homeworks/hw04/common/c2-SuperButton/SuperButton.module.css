@@ -1,36 +1,68 @@
 .button {
+    min-width: 132px;
+    /*max-height: 30px;*/
+    border-radius: 3px;
+    padding: 5px 24px;
+
+    font-family: Montserrat, sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 20px;
+    cursor: pointer;
 }
 
 .disabled {
+    background: rgba(0, 77, 153, 1);
+    opacity: 0.5;
 }
 
 .secondary {
+    border: 1px solid rgba(0, 102, 204, 1);
+    color: rgba(0, 102, 204, 1);
+    min-width: 176px;
+    background-color: transparent;
 }
 
 .default {
+    background: rgba(0, 102, 204, 1);
+    color: rgba(255, 255, 255, 1);
+    border: 1px solid rgba(0, 102, 204, 1);
 }
 
 .red {
+    background: rgba(204, 20, 57, 1);
+    color: rgba(255, 255, 255, 1);
+    border: 1px solid rgba(204, 20, 57, 1)
 }
 
 .default:hover {
+    min-width: 167px;
+    background-color: rgba(0, 128, 255, 1);
 }
 
 .red:hover {
+    background: rgba(255, 26, 71, 1);
+    min-width: 167px;
 }
 
 .secondary:hover {
+    background-color: rgba(229, 240, 250, 1);
+    min-width: 167px;
 }
 
-
 .default:active {
+    max-width: 150px;
+    background-color: rgba(0, 89, 178, 1);
 }
 
 .secondary:active {
+    background-color: rgba(201, 229, 255, 1);
 }
 
 .red:active {
+    background-color: rgba(178, 18, 50, 1);
 }
 
 .button:disabled {
+
 }
