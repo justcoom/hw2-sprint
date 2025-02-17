@@ -6,12 +6,13 @@
 .inputAndButtonContainer {
     display: flex;
     gap: 12px;
+
 }
 
 .error {
     font-weight: 400;
     font-size: 14px;
-
+    height: 15px;
     color: rgba(204, 0, 0, 1);
     margin-bottom: 5px;
 }
@@ -30,7 +31,8 @@
 }
 
 .input:focus {
-    /*outline: none;*/
+    outline: none;
+    border: 1px solid rgba(0, 102, 204, 1);
 }
 
 .errorInput {
@@ -54,7 +56,7 @@
 }
 
 .button:focus {
-    /*border: 2px solid black;*/
+    outline: 1px solid deepskyblue;
 }
 
 .button:active {
@@ -69,7 +71,6 @@
 .text {
     font-weight: 400;
     font-size: 14px;
-
     color: rgba(0, 0, 0, 0.5);
     margin-bottom: 10px;
 }
