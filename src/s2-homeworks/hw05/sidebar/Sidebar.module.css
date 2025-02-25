@@ -1,25 +1,77 @@
 .sidebar {
+    padding: 16px 0;
+    display: none;
+
+    /*opacity: 0;*/
+    /*transform: translateY(-10px);*/
+    /*transition: opacity 0.3s ease, transform 0.3s ease;*/
+    /*pointer-events: none;*/
 }
 
 .sidebar.open {
+
+
+    width: 317px;
+    height: 100%;
+    display: block;
+    position: fixed;
+    z-index: 999999;
+    background-color: rgba(255, 255, 255, 1);
+
+    /*opacity: 1;*/
+    /*transform: translateY(0);*/
+    /*pointer-events: auto;*/
 }
 
 .background {
+    position: fixed;
+    background-color: rgb(0, 0, 0, 0.3);
+    width: 100vw;
+    height: 100vh;
+    z-index: 99;
+    top: 0;
+    left: 0;
 }
 
 .nav {
+    display: flex;
+    flex-direction: column;
+    gap: 45px;
+    padding: 0 70px;
+
 }
 
 .nav a {
+    font-family: Montserrat, sans-serif;
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 26.82px;
+    text-decoration: none;
+    color: rgba(0, 0, 0, 1);
 }
 
 .nav a:hover {
+    color: rgba(88, 172, 255, 1);
 }
 
 .nav a.active {
+    color: rgba(0, 89, 178, 1);
+    text-decoration: underline;
 }
+
+.nav a:active {
+    color: rgba(61, 107, 153, 1);
+}
+
 .close {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 24px;
+    margin-left: 270px;
 }
 
 .close img {
+    width: 24px;
+    height: 24px;
 }
