@@ -9,6 +9,8 @@
     font-size: 14px;
     line-height: 20px;
     cursor: pointer;
+
+    transition: 0.4s ease;
 }
 
 .disabled {
@@ -19,7 +21,7 @@
 .secondary {
     border: 1px solid rgba(0, 102, 204, 1);
     color: rgba(0, 102, 204, 1);
-    min-width: 176px;
+    /*min-width: 176px;*/
     background-color: transparent;
 }
 
