@@ -1,15 +1,34 @@
 .radio {
+    width: 24px;
+    height: 24px;
+    margin-right: 12px;
 }
 
 .radio::before {
+
 }
 
+.radio:checked {
+    accent-color: black;
+}
 
 .radio:checked::before {
+
 }
 
 .label {
+    display: flex;
+    align-items: center;
 }
 
 .options {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.span {
+    font-family: Montserrat, sans-serif;
+    font-weight: 400;
+    font-size: 16px;
 }
