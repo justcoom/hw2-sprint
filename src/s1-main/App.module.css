@@ -7,6 +7,8 @@
     max-width: 1280px;
     padding: 24px 70px;
     margin-bottom: 38px;
+
+    min-height: 200px;
 }
 
 .hwTitle {
