@@ -9,7 +9,6 @@ export type StateType = {
 }
 
 export const loadingReducer = (state: StateType = initState, action: LoadingActionType): StateType => { // fix any
-    debugger
     switch (action.type) {
         // пишет студент  // need to fix
         case "CHANGE_LOADING":
