@@ -52,11 +52,16 @@ const HW15 = () => {
         getTechs(params)
             .then((res) => {
                 // делает студент
-
+                if (res) {
+                    setTechs(res.data.techs)
+                    setTotalCount(res.data.totalCount)
+                    // setLoading(false)
+                }
                 // сохранить пришедшие данные
 
                 //
             })
+            .finally(() => setLoading(false))
     }
 
     const onChangePagination = (newPage: number, newCount: number) => {
@@ -67,8 +72,10 @@ const HW15 = () => {
 
         // sendQuery(
         // setSearchParams(
-
-        //
+        setPage(newPage)
+        setCount(newCount)
+        setSearchParams({sort, page: newPage.toString(), count: newCount.toString()})
+        sendQuery({sort, page: newPage, count: newCount})
     }
 
     const onChangeSort = (newSort: string) => {
@@ -79,8 +86,10 @@ const HW15 = () => {
 
         // sendQuery(
         // setSearchParams(
-
-        //
+        setSort(newSort)
+        setPage(1)
+        setSearchParams({sort: newSort, page: '1', count: count.toString()})
+        sendQuery({sort: newSort, page: 1, count})
     }
 
     useEffect(() => {
@@ -103,11 +112,11 @@ const HW15 = () => {
     ))
 
     return (
-        <div id={'hw15'}>
+        <div id={'hw15'} style={{position: 'relative'}}>
             <div className={s2.hwTitle}>Homework #15</div>
 
-            <div className={s2.hw}>
-                {idLoading && <div id={'hw15-loading'} className={s.loading}>Loading...</div>}
+            <div className={idLoading ? s.blurred + " " + s2.hw : s2.hw}>
+                {idLoading && <div id={'hw15-loading'} className={s.loading}></div>}
 
                 <SuperPagination
                     page={page}
